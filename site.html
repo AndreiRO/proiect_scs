@@ -8,6 +8,31 @@
         <title>Delta Dunarii</title>
         <script type="text/javascript" src="jquery.js" ></script>
         <script type="text/javascript" src="game.js" ></script>
+        <script type="text/javascript" charset="utf-8">
+            function like()
+            {
+                if (typeof(Storage) != "undefined")
+                {
+                    // Store
+                    if (sessionStorage.getItem('like'))
+                    {
+                        sessionStorage.setItem('like', parseInt(sessionStorage.getItem('like')) + 1);
+                        document.getElementById("like").innerHTML = sessionStorage.getItem('like');
+                    }
+                    else
+                    {
+
+                        sessionStorage.setItem("like", 1);
+                        document.getElementById("like").innerHTML = '1';
+                    }
+                    // Retrieve
+                }
+                else
+                {
+                    document.getElementById("like").innerHTML = "Nu aveti suport pentru sessionStorage";
+                }
+            }
+        </script>
         <style type="text/css" media="screen">
             table, td, tr{
                 margin: 0;
@@ -18,12 +43,12 @@
                 vertical-align: baseline;
             }
             /* HTML5 display-role reset for older browsers */
-            article, aside, details, figcaption, figure, 
+            article, aside, details, figcaption, figure,
             footer, header, hgroup, menu, nav, section {
                 display: block;
             }
             body {
-                background-color: #ffff00;
+                background-color: '#ffff00';
                 line-height: 1;
             }
             ol, ul {
@@ -104,6 +129,16 @@
             <tr>
                 <th>
                     <canvas style="width:100%;height:100%;" id="gameCanvas"></canvas>
+                </th>
+            </tr>
+            </table>
+            <table class="center" border="0">
+            <tr>
+                <th>
+                    <input type="button" name="bt" value="Like!" id="bt" onclick="like()" />
+                </th>
+                <th>
+                    <div id="like">0</div>
                 </th>
             </tr>
         </table>
