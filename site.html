@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+
+        <title>Delta Dunarii</title>
+        <script type="text/javascript" src="jquery.js" ></script>
+        <script type="text/javascript" src="game.js" ></script>
+        <style type="text/css" media="screen">
+            table, td, tr{
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                background-color: #ffff00;
+                line-height: 1;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: '';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            input:hover {
+                color: pink;
+            }
+            table.center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+           .myButton {
+                background-color:#44c767;
+                -moz-border-radius:28px;
+                -webkit-border-radius:28px;
+                border-radius:5px;
+                border:1px solid #18ab29;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                font-family:Arial;
+                font-size:17px;
+                padding:16px 31px;
+                text-decoration:none;
+                text-shadow:0px 1px 0px #2f6627;
+                margin-left: 1cm;
+                margin-right: 1cm;
+            }
+            .myButton:hover {
+            background-color:#5cbf2a;
+            }
+            .myButton:active {
+                position:relative;
+                top:1px;
+            }
+
+            .td {
+                background-color: #00ff00;
+                margin-left: 0cm;
+                margin-right: 0cm;
+                padding-left: 0cm;
+                padding-right: 0cm;
+            }
+        </style>
+        <script type="text/javascript" charset="utf-8">
+            function clickit(url) {
+                window.location.href = url
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="ceva" class="center">Salut frate</h1>
+        <table border="0" class="center">
+            <tr>
+                <td class="td"><input type="button" class="myButton" name="some_name" value="Home" onclick="clickit('site.html')" ></th>
+                <td class="td"><input type="button" class="myButton" name="some_name" value="Fauna si flora" onclick="clickit('fauna.html')"></th>
+                <td class="td"><input type="button" class="myButton" name="some_name" value="Sfaturi" onclick="clickit('sfaturi.html')"></th>
+                <td class="td"><input type="button" class="myButton" name="some_name" value="Atractii" onclick="clickit('atractii.html')" ></th>
+                <td class="td"><input type="button" class="myButton" name="some_name" value="Link"></th>
+            </tr>
+        </table>
+
+        <table class="center" border="1" style="background-color: #ffffff; width: 75%; height:200px;margin-top: 3cm;">
+            <tr>
+                <th>
+                    <canvas style="width:100%;height:100%;" id="gameCanvas"></canvas>
+                </th>
+            </tr>
+        </table>
+
+    </body>
+</html>
