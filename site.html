@@ -48,7 +48,7 @@
                 display: block;
             }
             body {
-                background-color: '#ffff00';
+                background-color: #ffff00;
                 line-height: 1;
             }
             ol, ul {
@@ -121,11 +121,11 @@
                 <td class="td"><input type="button" class="myButton" name="some_name" value="Fauna si flora" onclick="clickit('fauna.html')"></th>
                 <td class="td"><input type="button" class="myButton" name="some_name" value="Sfaturi" onclick="clickit('sfaturi.html')"></th>
                 <td class="td"><input type="button" class="myButton" name="some_name" value="Atractii" onclick="clickit('atractii.html')" ></th>
-                <td class="td"><input type="button" class="myButton" name="some_name" value="Link"></th>
+                <td class="td"><input type="button" class="myButton" name="some_name" value="Link" onclick="clickit('link.html')" ></th>
             </tr>
         </table>
 
-        <table class="center" border="1" style="background-color: #ffffff; width: 75%; height:200px;margin-top: 3cm;">
+        <table class="center" border="1" style="background-color: #ffff00; width: 75%; height:200px;margin-top: 3cm;">
             <tr>
                 <th>
                     <canvas style="width:100%;height:100%;" id="gameCanvas"></canvas>
@@ -139,6 +139,17 @@
                 </th>
                 <th>
                     <div id="like">0</div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <object type="application/x-java-applet" height="400" width="400">
+                        <param name="code" value=" SimpleApplet" archive="SimpleApplet.jar"/>
+                        <param name="hotel" value="240"/>
+                        <param name="tent" value="50"/>
+                        <param name="trip" value="150"/>
+                        <p>Java nu este disponibil sau este dezactivat!</p>
+                        </object>
                 </th>
             </tr>
         </table>
